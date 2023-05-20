@@ -1,0 +1,565 @@
+Property ID In AVL Packet,Property Name,Bytes,Type,Min value,Max value,Multiplier,Units,Description,Parameter Group
+239,Ignition,1,Unsigned,0,1,-,-,"""0 : Ignition Off 1 : Ignition On""",Permanent I/O Elements
+240,Movement,1,Unsigned,0,1,-,-,"""0 : Movement Off 1 : Movement On""",Permanent I/O elements
+80,Data Mode,1,Unsigned,0,5,-,-,"""0 : Home On Stop 1 : Home On Moving 2 : Roaming On Stop 3 : Roaming On Moving 4 : Unknown On Stop 5 : Unknown On Moving""",Permanent I/O Elements
+21,GSM Signal,1,Unsigned,0,5,-,-,"""Value in range 1-5""",Permanent I/O Elements
+200,Sleep Mode,1,Unsigned,0,4,-,-,"""0 - No Sleep 1 : GPS Sleep 2 : Deep Sleep 3 : Online Sleep 4 - Ultra Sleep""",Permanent I/O Elements
+69,GNSS Status,1,Unsigned,0,3,-,-,"""0 - GNSS OFF 1 : GNSS ON with fix 2 - GNSS ON without fix 3 - GNSS sleep""",Permanent I/O Elements
+181,GNSS PDOP,2,Unsigned,0,500,0.1,,"""Coefficient, calculation formula""",Permanent I/O Elements
+182,GNSS HDOP,2,Unsigned,0,500,0.1,,"""Coefficient, calculation formula""",Permanent I/O Elements
+66,External Voltage,2,Unsigned,0,65535,0.001,V,"""Voltage""",Permanent I/O elements
+24,Speed,2,Unsigned,0,350,-,km/h,"""GNSS Speed""",Permanent I/O elements
+205,GSM Cell ID,2,Unsigned,0,65535,-,-,"""GSM base station ID""",Permanent I/O elements
+206,GSM Area Code,2,Unsigned,0,65535,-,-,"""Location Area code (LAC), it depends on GSM operator. It provides unique number which assigned to a set of base GSM stations.""",Permanent I/O elements
+67,Battery Voltage,2,Unsigned,0,65535,0.001,V,"""Voltage""",Permanent I/O elements
+68,Battery Current,2,Unsigned,0,65535,0.001,A,"""Current""",Permanent I/O elements
+241,Active GSM Operator,4,Unsigned,0,4294967295,-,-,"""Currently used GSM Operator code""",Permanent I/O elements
+199,Trip Odometer,4,Unsigned,0,2147483647,-,m,"""Trip Odometer value""",Permanent I/O elements
+16,Total Odometer,4,Unsigned,0,2147483647,-,-,"""Total Odometer value in meters""",Permanent I/O elements
+1,Digital Input 1,1,Unsigned,0,1,-,-,"""Logic: 0/1""",Permanent I/O elements
+9,Analog Input 1,2,Unsigned,0,65535,0.001,mV,"""Voltage""",Permanent I/O elements
+179,Digital Output 1,1,Unsigned,0,1,-,-,"""Logic: 0/1""",Permanent I/O elements
+12,Fuel Used GPS,4,Unsigned,0,4294967295,0.001,l,"""Fuel Used""",Permanent I/O elements
+13,Fuel Rate GPS,2,Unsigned,0,32767,0.01,l/100km,"""Average Fuel Use""",Permanent I/O elements
+17,Axis X,2,Signed,−8000,8000,-,mG,"""X axis value""",Permanent I/O elements
+18,Axis Y,2,Signed,−8000,8000,-,mG,"""Y axis value""",Permanent I/O elements
+19,Axis Z,2,Signed,−8000,8000,-,mG,"""Z axis value""",Permanent I/O elements
+11,ICCID1,8,Unsigned,0,0xffffffffffffffff,-,-,"""Value of SIM ICCID, MSB""",Permanent I/O elements
+10,SD Status,1,Unsigned,0,1,-,-,"""0 - not present 1 - present""",Permanent I/O elements
+2,Digital Input 2,1,Unsigned,0,1,-,-,"""Logic: 0/1""",Permanent I/O elements
+3,Digital Input 3,1,Unsigned,0,1,-,-,"""Logic: 0/1""",Permanent I/O elements
+6,Analog Input 2,2,Unsigned,0,65535,0.001,mV,"""Voltage""",Permanent I/O elements
+180,Digital Output 2,1,Unsigned,0,1,-,-,"""Logic 0/1""",Permanent I/O elements
+72,Dallas Temperature 1,4,Signed,−550,1150,0.1,°C,"""Degrees ( °C ), -55 - +115,if 850 : Sensor not ready if 2000 : Value read error if 3000 : Not connected if 4000 : ID failed if 5000 : same as 850""",Permanent I/O elements
+73,Dallas Temperature 2,4,Signed,−550,1150,0.1,°C,"""Degrees ( °C ), -55 - +115,if 850 : Sensor not ready if 2000 : Value read error if 3000 : Not connected if 4000 : ID failed if 5000 : same as 850""",Permanent I/O elements
+74,Dallas Temperature 3,4,Signed,−550,1150,0.1,°C,"""Degrees ( °C ), -55 - +115,if 850 : Sensor not ready if 2000 : Value read error if 3000 : Not connected if 4000 : ID failed if 5000 : same as 850""",Permanent I/O elements
+75,Dallas Temperature 4,4,Signed,−550,1150,0.1,°C,"""Degrees ( °C ), -55 - +115,if 850 : Sensor not ready if 2000 : Value read error if 3000 : Not connected if 4000 : ID failed if 5000 : same as 850""",Permanent I/O elements
+76,Dallas Temperature ID 1,8,Unsigned,0,0xffffffffffffffff,-,-,"""Dallas sensor ID""",Permanent I/O elements
+77,Dallas Temperature ID 2,8,Unsigned,0,0xffffffffffffffff,-,-,"""Dallas sensor ID""",Permanent I/O elements
+79,Dallas Temperature ID 3,8,Unsigned,0,0xffffffffffffffff,-,-,"""Dallas sensor ID""",Permanent I/O elements
+71,Dallas Temperature ID 4,8,Unsigned,0,0xffffffffffffffff,-,-,"""Dallas sensor ID""",Permanent I/O elements
+78,iButton,8,Unsigned,0,0xffffffffffffffff,-,-,"""iButton ID""",Permanent I/O elements
+207,RFID,8,Unsigned,0,0xffffffffffffffff,-,-,"""RFID ID""",Permanent I/O elements
+201,LLS 1 Fuel Level,2,Signed,−4,32767,-,kvants or ltr,"""Fuel level measured by LLS sensor via RS232/RS485""",Permanent I/O elements
+202,LLS 1 Temperature,1,Signed,−128,127,-,°C,"""Fuel temperature measured by LLS via RS232/RS485""",Permanent I/O elements
+203,LLS 2 Fuel Level,2,Signed,−4,32767,-,kvants or ltr,"""Fuel level measured by LLS sensor via RS485""",Permanent I/O elements
+204,LLS 2 Temperature,1,Signed,−128,127,-,°C,"""Fuel temperature measured by LLS via RS485""",Permanent I/O elements
+210,LLS 3 Fuel Level,2,Unsigned,−4,32767,-,kvants or ltr,"""Fuel level measured by LLS sensor via RS485""",Permanent I/O elements
+211,LLS 3 Temperature,1,Signed,−128,127,-,°C,"""Fuel temperature measured by LLS via RS485""",Permanent I/O elements
+212,LLS 4 Fuel Level,2,Signed,−4,32767,-,kvants or ltr,"""Fuel level measured by LLS sensor via RS485""",Permanent I/O elements
+213,LLS 4 Temperature,1,Signed,−128,127,-,°C,"""Fuel temperature measured by LLS via RS485""",Permanent I/O elements
+214,LLS 5 Fuel Level,2,Signed,−4,32767,-,kvants or ltr,"""Fuel level measured by LLS sensor via RS485""",Permanent I/O elements
+215,LLS 5 Temperature,1,Signed,−128,127,-,°C,"""Fuel temperature measured by LLS via RS485""",Permanent I/O elements
+15,Eco Score,2,Unsigned,0,65535,0.01,-,"""Average amount of events on some distance""",Permanent I/O elements
+113,Battery Level,1,Unsigned,0,100,-,%,"""Battery capacity level""",Permanent I/O elements
+238,User ID,8,Unsigned,0,0xffffffffffffffff,-,-,"""MAC address of NMEA receiver device connected via Bluetooth""",Permanent I/O elements
+237,Network Type,1,Unsigned,0,1,-,-,"""0 - 3G1 - GSM 2 - 4G 3 - LTE CAT M1 4 - LTE CAT NB1 99 - Unknown""",Permanent I/O elements
+4,Pulse Counter Din1,4,Unsigned,0,4294967295,-,-,"""Counts pulses, count is reset when records are saved""",Permanent I/O elements
+5,Pulse Counter Din2,4,Unsigned,0,4294967295,-,-,"""Counts pulses, count is reset when records are saved""",Permanent I/O elements
+263,BT Status,1,Unsigned,0,4,-,-,"""0 - BT is disabled1 - BT Enabled, not device connected 2 - Device connected, BTv3 Only 3 - Device connected, BLE only 4 - Device connected, BLE + BT""",Permanent I/O elements
+264,Barcode ID,Variable,ASCII,0,32,-,-,"""Barcode ID""",Permanent I/O elements
+269,Escort LLS Temperature #1,2,Signed,−128,127,-,°C,"""Fuel temperature""",Permanent I/O elements
+270,Escort LLS Fuel level #1,2,Unsigned,0,65535,-,-,"""Fuel Level""",Permanent I/O elements
+271,Escort LLS Battery Voltage #1,2,Unsigned,0,65535,0.01,V,"""Battery Voltage""",Permanent I/O elements
+272,Escort LLS Temperature #2,2,Signed,−128,127,-,°C,"""Fuel temperature""",Permanent I/O elements
+273,Escort LLS Fuel level #2,2,Unsigned,0,65535,-,-,"""Fuel Level""",Permanent I/O elements
+274,Escort LLS Battery Voltage #2,2,Unsigned,0,65535,0.01,V,"""Battery Voltage""",Permanent I/O elements
+275,Escort LLS Temperature #3,2,Signed,−128,127,-,°C,"""Fuel temperature""",Permanent I/O elements
+276,Escort LLS Fuel level #3,2,Unsigned,0,65535,-,-,"""Fuel Level""",Permanent I/O elements
+277,Escort LLS Battery Voltage #3,2,Unsigned,0,65535,0.01,V,"""Battery Voltage""",Permanent I/O elements
+278,Escort LLS Temperature #4,2,Signed,−128,127,-,°C,"""Fuel temperature""",Permanent I/O elements
+279,Escort LLS Fuel level #4,2,Unsigned,0,65535,-,-,"""Fuel Level""",Permanent I/O elements
+280,Escort LLS Battery Voltage #4,2,Unsigned,0,65535,0.01,V,"""Battery Voltage""",Permanent I/O elements
+303,Instant Movement,1,Unsigned,0,1,-,-,"""Logic: 0/1 returns movement value""",Permanent I/O elements
+327,UL202-02 Sensor Fuel level,2,Signed,−150,32767,0.1,mm,"""UL202-02 Sensor Fuel level""",Permanent I/O elements
+483,UL202-02 Sensor Status,1,Unsigned,0,255,-,-,"""UL202-02 sensor status codes""",Permanent I/O elements
+380,Digital output 3,1,Unsigned,0,1,-,-,"""Logic: 0/1""",Permanent I/O elements
+381,Ground Sense,1,Unsigned,0,1,-,-,"""Logic: 0/1""",Permanent I/O elements
+387,ISO6709 Coordinates,34,HEX,0,0x7fffffffffffffff,-,-,"""ISO6709 CoordinatesLatitude, Longitude (in Degrees, Minutes and Seconds) and Altitude: IO value format: ±DDMMSS.SSSS±DDDMMSS.SSSS±AAA.AAA/""",Permanent I/O elements
+636,UMTS/LTE Cell ID,4,Unsigned,0,0xFFFFFFFF,-,-,"""""",Permanent I/O elements
+403,Driver Name,35,Unsigned,-,-,-,-,"""Driver name extracted from card, displayed without delimiters ($ signs)""",Permanent I/O elements
+404,Driver card license type,1,Unsigned,0,8,-,-,"""None - 0 B.1 license type - 1 B.2 license type - 2 B.3 license type - 3 B.4 license type - 4 T.1 license type - 5 T.2 license type - 6 T.3 license type - 7 T.4 license type - 8""",Permanent I/O elements
+405,Driver Gender,1,Unsigned,0,2,-,-,"""None - 0 Male - 1 Female - 2""",Permanent I/O elements
+406,Driver Card ID,4,Unsigned,0,4294967295,-,-,"""None - 0 Male - 1 Female - 2""",Permanent I/O elements
+407,Driver card expiration date,1,Unsigned,0,9999,-,-,"""""",Permanent I/O elements
+408,Driver Card place of issue,4,Unsigned,0,65535,-,-,"""Extracted from card""",Permanent I/O Elements
+409,Driver Status Event,1,Unsigned,0,2,-,-,"""Registered - 0 Deregistered - 1 Swapping - 2""",Permanent I/O elements
+329,AIN Speed,2,Unsigned,0,65535,-,-,"""""",Permanent I/O elements
+500,MSP500 vendor name,40,ASCII,0,40,-,-,"""Name of the integrator who installed the device""",Permanent I/O elements
+501,MSP500 vehicle number,40,ASCII,0,40,-,-,"""Vehicle number on which the device is installed""",Permanent I/O elements
+502,MSP500 speed sensor,1,unsigned,0,1,-,-,"""Status of the speed sensor""",Permanent I/O elements
+637,Wake Reason,1,Unsigned,0,1,-,-,"""True if device was woken by RTC alarm""",Permanent I/O elements
+155,Geofence zone 01,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+156,Geofence zone 02,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+157,Geofence zone 03,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+158,Geofence zone 04,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+159,Geofence zone 05,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+61,Geofence zone 06,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+62,Geofence zone 07,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+63,Geofence zone 08,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+64,Geofence zone 09,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+65,Geofence zone 10,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+70,Geofence zone 11,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+88,Geofence zone 12,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+91,Geofence zone 13,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+92,Geofence zone 14,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+93,Geofence zone 15,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+94,Geofence zone 16,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+95,Geofence zone 17,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+96,Geofence zone 18,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+97,Geofence zone 19,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+98,Geofence zone 20,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+99,Geofence zone 21,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+153,Geofence zone 22,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+154,Geofence zone 23,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+190,Geofence zone 24,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+191,Geofence zone 25,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+192,Geofence zone 26,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+193,Geofence zone 27,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+194,Geofence zone 28,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+195,Geofence zone 29,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+196,Geofence zone 30,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+197,Geofence zone 31,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+198,Geofence zone 32,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+208,Geofence zone 33,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+209,Geofence zone 34,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+216,Geofence zone 35,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+217,Geofence zone 36,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+218,Geofence zone 37,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+219,Geofence zone 38,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+220,Geofence zone 39,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+221,Geofence zone 40,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+222,Geofence zone 41,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+223,Geofence zone 42,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+224,Geofence zone 43,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+225,Geofence zone 44,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+226,Geofence zone 45,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+227,Geofence zone 46,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+228,Geofence zone 47,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+229,Geofence zone 48,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+230,Geofence zone 49,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+231,Geofence zone 50,1,Unsigned,0,3,-,-,"""0 : target left zone 1 : target entered zone 2 : over speeding end 3 : over speeding start""",Eventual I/O elements
+175,Auto Geofence,1,Unsigned,0,1,-,-,"""0 : target left zone 1 : target entered zone""",Eventual I/O elements
+250,Trip,1,Unsigned,0,1,-,-,"""0 : trip stop 1 : trip start From 01.00.24 fw version available with BT app new values: 2 : Business Status 3 : Private Status 4-9 : Custom Statuses""",Eventual I/O elements
+255,Over Speeding,1,Unsigned,0,255,-,km/h,"""At over speeding start km/h, at over speeding end km/h""",Eventual I/O elements
+257,Crash trace data,Variable,HEX,0,1200,-,-,"""Crash trace data""",Eventual I/O elements
+285,Blood alcohol content,2,Unsigned,0,9999,-,-,"""Alcohol content in blood in perlims and mode. First 14 bits from MSB are perlims multiplied by 1000 and last to bits are 0 - Passive test, 1 Active test, 2 and 3 are reserved.""",Eventual I/O elements
+251,Idling,1,Unsigned,0,1,-,-,"""0 : moving 1 : idling""",Eventual I/O elements
+253,Green driving type,1,Unsigned,1,3,-,-,"""1 : harsh acceleration 2 : harsh braking 3 : harsh cornering""",Eventual I/O elements
+246,Towing,1,Unsigned,0,1,-,-,"""0 : steady 1 : towing""",Eventual I/O elements
+252,Unplug,1,Unsigned,0,1,-,-,"""0 : battery present 1 : battery unplugged""",Eventual I/O elements
+247,Crash detection,1,Unsigned,1,6,-,-,"""1 : real crash detected (device is calibrated) 2 : limited crash trace (device not calibrated) 3 - limited crash trace (device is calibrated) 4 - full crash trace (device not calibrated) 5 - full crash trace (device is calibrated) 6 - real crash detected (device not calibrated) 7 - fake crash detected (device calibrated, pothole) 8 - fake crash detected (device calibrated, speed check)""",Eventual I/O elements
+248,Immobilizer,1,Unsigned,0,2,-,-,"""0 : iButton not connected 1 : iButton connected (Immobilizer) 2 : iButton connected (Authorized Driving)""",Eventual I/O elements
+254,Green Driving Value,2,Unsigned,0,255,acc and braking: 0.01,G or rad,"""Depending on green driving type: if harsh acceleration or braking : g*100 (value 123 -> 1.23g). If Green driving source is „GPS“ : harsh cornering value is rad/s*100. If source is „Accelerometer“ : g*100.""",Eventual I/O elements
+249,Jamming,1,Unsigned,0,1,-,-,"""0 : jamming stop 1 : jamming start""",Eventual I/O elements
+14,ICCID2,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Value of SIM ICCID, LSB""",Eventual I/O elements
+243,Green driving event duration,2,Unsigned,0,65535,-,ms,"""Duration of event that did generate Green driving""",Eventual I/O elements
+236,Alarm,1,Unsigned,0,1,-,-,"""0 : Reserved 1 : Alarm event occured""",Eventual I/O elements
+258,EcoMaximum,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Element stores maximum accelerometer values in mg on all axis during Eco driving event 8 Bytes: 2B Zeros 2B - X axis 2B - Y axis 2B - Z axis""",Eventual I/O elements
+259,EcoAverage,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Element stores average accelerometer values in mg on all axis during Eco driving event 8 Bytes: 2B Zeros 2B - X axis 2B - Y axis 2B - Z axis""",Eventual I/O elements
+260,EcoDuration,2,Unsigned,0,65535,-,ms,"""Duration of Eco driving event in miliseconds""",Eventual I/O elements
+283,Driving State,1,Unsigned,0,3,-,-,"""1 - Ignition ON 2 - Driving 3 - Ignition OFF""",Eventual I/O elements
+284,Driving Records,2,Unsigned,0,65535,-,-,"""Number of Records between Ignition ON and Ignition OFF""",Eventual I/O elements
+391,Private mode,1,Unsigned,0,255,-,-,"""Private mode state0 - Private mode off 1 - Private mode on""",Eventual I/O elements
+317,Crash event counter,1,Unsigned,0,255,-,-,"""Connects trace with specific eventual crash record""",Eventual I/O elements
+449,Ignition On Counter,4,Unsigned,0,2147483647,-,s,"""0 - Disable 1 - Enable""",Eventual I/O elements
+256,VIN,17,ASCII,0,0xff,-,-,"""VIN number""",OBD elements
+30,Number of DTC,1,Unsigned,0,255,-,-,"""Number of DTC""",OBD elements
+31,Engine Load,1,Unsigned,0,100,-,%,"""Calculated engine load value""",OBD elements
+32,Coolant Temperature,1,Signed,−128,127,-,°C,"""Engine coolant temperature""",OBD elements
+33,Short Fuel Trim,1,Signed,−100,99,-,%,"""Short term fuel trim 1""",OBD elements
+34,Fuel pressure,2,Unsigned,0,765,-,kPa,"""Fuel pressure""",OBD elements
+35,Intake MAP,1,Unsigned,0,255,-,kPa,"""Intake manifold absolute pressure""",OBD elements
+36,Engine RPM,2,Unsigned,0,16384,-,rpm,"""Engine RPM""",OBD elements
+37,Vehicle Speed,1,Unsigned,0,255,-,km/h,"""Vehicle speed""",OBD elements
+38,Timing Advance,1,Signed,−64,64,-,°,"""Timing advance""",OBD elements
+39,Intake Air Temperature,1,Signed,−128,127,-,°C,"""Intake air temperature""",OBD elements
+40,MAF,2,Unsigned,0,65535,0.01,g/sec,"""MAF air flow rate""",OBD elements
+41,Throttle Position,1,Unsigned,0,100,-,%,"""Throttle position""",OBD elements
+42,Runtime since engine start,2,Unsigned,0,65535,-,s,"""Runtime since engine start""",OBD elements
+43,Distance Traveled MIL On,2,Unsigned,0,65535,-,km,"""Distance ormattin MIL on""",OBD elements
+44,Relative Fuel Rail Pressure,2,Unsigned,0,5178,0.1,kPa,"""Relative fuel rail pressure""",OBD elements
+45,Direct Fuel Rail Pressure,2,Unsigned,0,65535,10,kPa,"""Direct Fuel Rail Pressure""",OBD elements
+46,Commanded EGR,1,Unsigned,0,100,-,%,"""Commanded EGR""",OBD elements
+47,EGR Error,1,Signed,−100,100,-,%,"""EGR error""",OBD elements
+48,Fuel Level,1,Unsigned,0,100,-,%,"""Fuel level""",OBD elements
+49,Distance Since Codes Clear,2,Unsigned,0,65535,-,km,"""Distance traveled since codes cleared""",OBD elements
+50,Barometic Pressure,1,Unsigned,0,255,-,kPa,"""Barometic pressure""",OBD elements
+51,Control Module Voltage,2,Unsigned,0,65535,0.001,V,"""Control module voltage""",OBD elements
+52,Absolute Load Value,2,Unsigned,0,25700,-,%,"""Absolute load value""",OBD elements
+759,Fuel Type,1,Unsigned,0,255,-,-,"""0 Not available 1 Gasoline 2 Methanol 3 Ethanol 4 Diesel 5 LPG 6 CNG 7 Propane 8 Electric 9 Bifuel running Gasoline 10 Bifuel running Methanol 11 Bifuel running Ethanol 12 Bifuel running LPG 13 Bifuel running CNG 14 Bifuel running Propane 15 Bifuel running Electricity 16 Bifuel running electric and combustion engine 17 Hybrid gasoline 18 Hybrid Ethanol 19 Hybrid Diesel 20 Hybrid Electric 21 Hybrid running electric and combustion engine 22 Hybrid Regenerative 23 Bifuel running diesel""",OBD elements
+53,Ambient Air Temperature,1,Signed,−128,127,-,°C,"""Ambient air temperature""",OBD elements
+54,Time Run With MIL On,2,Unsigned,0,65535,-,min,"""Time run with MIL on""",OBD elements
+55,Time Since Codes Cleared,2,Unsigned,0,65535,-,min,"""Time since codes cleared""",OBD elements
+56,Absolute Fuel Rail Pressure,2,Unsigned,0,65535,0.1,kPa,"""Absolute fuel rail pressure""",OBD elements
+57,Hybrid battery pack life,1,Unsigned,0,100,-,%,"""Hybrid battery pack remaining life""",OBD elements
+58,Engine Oil Temperature,1,Unsigned,0,215,-,°C,"""Engine oil temperature""",OBD elements
+59,Fuel injection timing,2,Signed,−21000,30200,0.01,°,"""Fuel injection timing""",OBD elements
+543,Hybrid System Voltage,2,Unsigned,0,1024,-,V,"""Hybrid vehicle system voltage""",OBD elements
+544,Hybrid System Current,2,Signed,−3277,3277,-,A,"""Hybrid vehicle system current""",OBD elements
+281,Fault Codes,variable,ASCII,0,128,-,-,"""Fault Codes (values separated via "","")""",OBD elements
+60,Fuel Rate,2,Unsigned,0,32767,0.01,L/h,"""Engine fuel rate, L/h*100""",OBD elements
+389,OBD OEM Total Mileage,4,Unsigned,0,0xffffffff,-,km,"""Total mileage received by requesting vehicle specific PID""",OBD OEM elements
+390,OBD OEM Fuel Level,4,Unsigned,0,0xffffffff,0.1,l,"""Fuel level in litres received by requesting vehicle specific PID""",OBD OEM elements
+402,OEM Distance Until Service,4,Unsigned,0,0xffffffff,-,km,"""Distance till next service received by requesting vehicle specific PID""",OBD OEM elements
+410,OEM Battery charge state,1,Unsigned,0,1,-,-,"""0 : Not charging 1 : Charging""",OBD OEM elements
+411,OEM Battery charge level,1,Unsigned,0,100,-,%,"""Represents battery charged level""",OBD OEM elements
+412,OEM Battery power consumption,2,Unsigned,0,65535,-,kWh/100km,"""Represents battery power consumption""",OBD OEM elements
+755,OEM Remaining distance,2,Unsigned,0,65535,-,km,"""Remaining distance until fuel tank empty or battery (EV) depleted""",OBD OEM elements
+1151,OEM Battery State Of Health,2,Unsigned,0,65535,-,%,"""Battery State of Health""",OBD OEM elements
+1152,OEM Battery Temperature,2,Signed,−32768,32767,-,°C,"""Battery pack temperature""",OBD OEM elements
+385,Beacon,Variable,HEX,0,1024,-,-,"""List of Beacon IDs""",Permanent I/O elements
+548,Advanced BLE Beacon data,1024,HEX,0,1024,-,-,"""List of Beacon Ids and their data when advanced Beacon mode is selected""",Eventual I/O elements
+25,BLE Temperature #1,2,Signed,−4000,12500,0.01*,°C,"""Degrees ( °C ), -40 - +125; Error codes: 4000 - abnormal sensor state 3000 - sensor not found 2000 - failed sensor data parsing From firmware version 03.28.00 and up: 32767 - sensor not found 32766 - failed sensor data parsing 32765 - abnormal sensor state""",Bluetooth Low Energy
+26,BLE Temperature #2,2,Signed,−4000,12500,0.01*,°C,"""Degrees ( °C ), -40 - +125; Error codes: 4000 - abnormal sensor state 3000 - sensor not found 2000 - failed sensor data parsing From firmware version 03.28.00 and up: 32767 - sensor not found 32766 - failed sensor data parsing 32765 - abnormal sensor state""",Bluetooth Low Energy
+27,BLE Temperature #3,2,Signed,−4000,12500,0.01*,°C,"""Degrees ( °C ), -40 - +125; Error codes: 4000 - abnormal sensor state 3000 - sensor not found 2000 - failed sensor data parsing From firmware version 03.28.00 and up: 32767 - sensor not found 32766 - failed sensor data parsing 32765 - abnormal sensor state""",Bluetooth Low Energy
+28,BLE Temperature #4,2,Signed,−4000,12500,0.01*,°C,"""Degrees ( °C ), -40 - +125; Error codes: 4000 - abnormal sensor state 3000 - sensor not found 2000 - failed sensor data parsing From firmware version 03.28.00 and up: 32767 - sensor not found 32766 - failed sensor data parsing 32765 - abnormal sensor state""",Bluetooth Low Energy
+29,BLE Battery #1,1,Unsigned,0,100,-,%,"""Battery level of sensor #1""",Bluetooth Low Energy
+20,BLE Battery #2,1,Unsigned,0,100,-,%,"""Battery level of sensor #2""",Bluetooth Low Energy
+22,BLE Battery #3,1,Unsigned,0,100,-,%,"""Battery level of sensor #3""",Bluetooth Low Energy
+23,BLE Battery #4,1,Unsigned,0,100,-,%,"""Battery level of sensor #4""",Bluetooth Low Energy
+86,BLE Humidity #1,2,Unsigned,0,1000,0.1*,%RH,"""Humidity From firmware version 03.28.00 and up: 32735 - sensor not found 32734 - failed sensor data parsing 32733 - abnormal sensor state""",Bluetooth Low Energy
+104,BLE Humidity #2,2,Unsigned,0,1000,0.1*,%RH,"""Humidity From firmware version 03.28.00 and up: 32735 - sensor not found 32734 - failed sensor data parsing 32733 - abnormal sensor state""",Bluetooth Low Energy
+106,BLE Humidity #3,2,Unsigned,0,1000,0.1*,%RH,"""Humidity From firmware version 03.28.00 and up: 32735 - sensor not found 32734 - failed sensor data parsing 32733 - abnormal sensor state""",Bluetooth Low Energy
+108,BLE Humidity #4,2,Unsigned,0,1000,0.1*,%RH,"""Humidity From firmware version 03.28.00 and up: 32735 - sensor not found 32734 - failed sensor data parsing 32733 - abnormal sensor state""",Bluetooth Low Energy
+270,BLE Fuel Level #1,2,Unsigned,0,65535,-,-,"""Fuel Level""",Bluetooth Low Energy
+273,BLE Fuel Level #2,2,Unsigned,0,65535,-,-,"""Fuel Level""",Bluetooth Low Energy
+276,BLE Fuel Level #3,2,Unsigned,0,65535,-,-,"""Fuel Level""",Bluetooth Low Energy
+279,BLE Fuel Level #4,2,Unsigned,0,65535,-,-,"""Fuel Level""",Bluetooth Low Energy
+306,BLE Fuel Frequency #1,4,Unsigned,0,2147483647,-,-,"""Frequency value of BLE fuel sensor #1""",Bluetooth Low Energy
+307,BLE Fuel Frequency #2,4,Unsigned,0,2147483647,-,-,"""Frequency value of BLE fuel sensor #2""",Bluetooth Low Energy
+308,BLE Fuel Frequency #3,4,Unsigned,0,2147483647,-,-,"""Frequency value of BLE fuel sensor #3""",Bluetooth Low Energy
+309,BLE Fuel Frequency #4,4,Unsigned,0,2147483647,-,-,"""Frequency value of BLE fuel sensor #4""",Bluetooth Low Energy
+335,BLE Luminosity #1,2,Unsigned,0,0xFFFF,-,lx,"""Luminosity value of BLE sensor""",Bluetooth Low Energy
+336,BLE Luminosity #2,2,Unsigned,0,0xFFFF,-,lx,"""Luminosity value of BLE sensor""",Bluetooth Low Energy
+337,BLE Luminosity #3,2,Unsigned,0,0xFFFF,-,lx,"""Luminosity value of BLE sensor""",Bluetooth Low Energy
+338,BLE Luminosity #4,2,Unsigned,0,0xFFFF,-,lx,"""Luminosity value of BLE sensor""",Bluetooth Low Energy
+331,BLE 1 Custom #1,Variable,HEX,0,-,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+463,BLE 1 Custom #2,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+464,BLE 1 Custom #3,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+465,BLE 1 Custom #4,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+466,BLE 1 Custom #5,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+332,BLE 2 Custom #1,Variable,HEX,0,-,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+467,BLE 2 Custom #2,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+468,BLE 2 Custom #3,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+469,BLE 2 Custom #4,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+470,BLE 2 Custom #5,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+333,BLE 3 Custom #1,Variable,HEX,0,-,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+471,BLE 3 Custom #2,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+472,BLE 3 Custom #3,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+473,BLE 3 Custom #4,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+474,BLE 3 Custom #5,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+334,BLE 4 Custom #1,Variable,HEX,0,-,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+475,BLE 4 Custom #2,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+476,BLE 4 Custom #3,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+477,BLE 4 Custom #4,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+478,BLE 4 Custom #5,4,UNSIGNED LONG INT,0,4294967295,-,-,"""Custom IO element for BLE sensor""",Bluetooth Low Energy
+81,Vehicle Speed,1,Unsigned,0,255,-,km/h,"""Vehicle Speed""","LVCAN200, ALLCAN300, CANCONTROL"
+82,Accelerator Pedal Position,1,Unsigned,0,102,-,%,"""Value in percentages""","LVCAN200, ALLCAN300, CANCONTROL"
+83,Fuel Consumed,4,Unsigned,0,2147483647,0.1,l,"""Value in liters""","LVCAN200, ALLCAN300, CANCONTROL"
+84,Fuel Level,2,Unsigned,0,65535,0.1,l,"""Value in liters""","LVCAN200, ALLCAN300, CANCONTROL"
+85,Engine RPM,2,Unsigned,0,16384,-,rpm,"""Value in rounds per minute""","LVCAN200, ALLCAN300, CANCONTROL"
+87,Total Mileage,4,Unsigned,0,4294967295,-,m,"""Value in meters""","LVCAN200, ALLCAN300, CANCONTROL"
+89,Fuel level,1,Unsigned,0,100,-,%,"""Value in percentages""","LVCAN200, ALLCAN300, CANCONTROL"
+90,Door Status,2,Unsigned,0,16128,-,-,"""Door status value: Min : 0, Max : 16128 Door status is represented as bitmask converted to decimal value. Possible values: 0 : all doors closed 0x100 (256) : front left door is opened 0x200 (512) : front right door is opened 0x400 (1024) : rear left door is opened 0x800 (2048) : rear right door is opened 0x1000 (4096) : hood is opened 0x2000 (8192) : trunk is opened 0x3F00 (16128) : all doors are opened or combinations of values""","LVCAN200, ALLCAN300, CANCONTROL"
+100,Program Number,4,Unsigned,0,99999,-,-,"""Value: Min : 0, Max : 99999""","LVCAN200, ALLCAN300, CANCONTROL"
+101,Module ID 8B,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Module ID 8 Bytes""","LVCAN200, ALLCAN300, CANCONTROL"
+388,Module ID 17B,17,HEX,0,0x7FFFFFFFFFFFFFFF,-,-,"""Module ID 17 Bytes""","LVCAN200, ALLCAN300, CANCONTROL"
+102,Engine Worktime,4,Unsigned,0,1677215,-,min,"""Engine work time""","ALLCAN300, CANCONTROL"
+103,Engine Worktime (counted),4,Unsigned,0,1677215,-,min,"""Total engine work time""","ALLCAN300, CANCONTROL"
+105,Total Mileage (counted),4,Unsigned,0,4294967295,-,m,"""Total Vehicle Mileage""","LVCAN200, ALLCAN300, CANCONTROL"
+107,Fuel Consumed (counted),4,Unsigned,0,2147483647,0.1,l,"""Total Fuel Consumed""","LVCAN200, ALLCAN300, CANCONTROL"
+110,Fuel Rate,2,Unsigned,0,32768,0.1,l/h,"""Fuel rate""",ALLCAN300
+111,AdBlue Level,1,Unsigned,0,100,-,%,"""AdBlue""",ALLCAN300
+112,AdBlue Level,2,Unsigned,0,65535,0.1,l,"""AdBlue level""",ALLCAN300
+114,Engine Load,1,Unsigned,0,130,-,%,"""Engine Load""",ALLCAN300
+115,Engine Temperature,2,Signed,−600,1270,0.1,°C,"""Engine Temperature""","LVCAN200, ALLCAN300, CANCONTROL"
+118,Axle 1 Load,2,Unsigned,0,32768,-,kg,"""Axle 1 load""",ALLCAN300
+119,Axle 2 Load,2,Unsigned,0,32768,-,kg,"""Axle 2 load""",ALLCAN300
+120,Axle 3 Load,2,Unsigned,0,32768,-,kg,"""Axle 3 load""",ALLCAN300
+121,Axle 4 Load,2,Unsigned,0,32768,-,kg,"""Axle 4 load""",ALLCAN300
+122,Axle 5 Load,2,Unsigned,0,32768,-,kg,"""Axle 5 load""",ALLCAN300
+123,Control State Flags,4,Unsigned,0,4294967295,-,-,"""Control state flags""","ALLCAN300, CANCONTROL"
+124,Agricultural Machinery Flags,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Agricultural machinery flags""",ALLCAN300
+125,Harvesting Time,4,Unsigned,0,16777215,-,min,"""Harvesting time""",ALLCAN300
+126,Area of Harvest,4,Unsigned,0,4294967295,-,m2,"""Area of harvest in square meters""",ALLCAN300
+127,Mowing Efficiency,4,Unsigned,0,4294967295,-,m2/h,"""Mowing efficiency""",ALLCAN300
+128,Grain Mown Volume,4,Unsigned,0,4294967295,-,kg,"""Mown volume""",ALLCAN300
+129,Grain Moisture,2,Unsigned,0,100,-,%,"""Grain moisture""",ALLCAN300
+130,Harvesting Drum RPM,2,Unsigned,0,65535,-,rpm,"""Harvesting drum rpm""",ALLCAN300
+131,Gap Under Harvesting Drum,1,Unsigned,0,255,-,mm,"""Gap under harvesting drum""",ALLCAN300
+132,Security State Flags,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Security state flags""","ALLCAN300, CANCONTROL"
+133,Tachograph Total Vehicle Distance,4,Unsigned,0,4294967295,-,m,"""Tacho Total Vehicle Distance""",ALLCAN300
+134,Trip Distance,4,Unsigned,0,4294967295,-,m,"""Trip distance""",ALLCAN300
+135,Tachograph Vehicle Speed,2,Unsigned,0,255,-,km/h,"""Tacho vehicle speed""",ALLCAN300
+136,Tacho Driver Card Presence,1,Unsigned,0,3,-,-,"""Tacho Driver Card Presence""",ALLCAN300
+137,Driver 1 States,1,Unsigned,0,255,-,-,"""Driver 1 States""",ALLCAN300
+138,Driver 2 States,1,Unsigned,0,255,-,-,"""Driver 2 States""",ALLCAN300
+139,Driver 1 Continuous Driving Time,2,Unsigned,0,65535,-,min.,"""Driver 1 Continuous Driving Time, minutes""",ALLCAN300
+140,Driver 2 Continuous Driving Time,2,Unsigned,0,65535,-,min.,"""Driver 2 Continuous Driving Time, minutes""",ALLCAN300
+141,Driver 1 Cumulative Break Time,2,Unsigned,0,65535,-,min.,"""Driver 1 Cumulative Break Time, minutes""",ALLCAN300
+142,Driver 2 Cumulative Break Time,2,Unsigned,0,65535,-,min.,"""Driver 2 Cumulative Break Time, minutes""",ALLCAN300
+143,Driver 1 Selected Activity Duration,2,Unsigned,0,65535,-,min.,"""Driver 1 Duration Of Selected Activity, minutes""",ALLCAN300
+144,Driver 2 Selected Activity Duration,2,Unsigned,0,65535,-,min.,"""Driver 2 Duration Of Selected Activity, minutes""",ALLCAN300
+145,Driver 1 Cumulative Driving Time,2,Unsigned,0,65535,-,min.,"""Driver 1 Cumulative Driving Time, minutes""",ALLCAN300
+146,Driver 2 Cumulative Driving Time,2,Unsigned,0,65535,-,min.,"""Driver 2 Cumulative Driving Time, minutes""",ALLCAN300
+147,Driver 1 ID High,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Driver 1 ID High""",ALLCAN300
+148,Driver 1 ID Low,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Driver 1 ID Low""",ALLCAN300
+149,Driver 2 ID High,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Driver 2 ID High""",ALLCAN300
+150,Driver 2 ID Low,8,Unsigned,0,0xFFFFFFFFFFFFFFFF,-,-,"""Driver 2 ID Low""",ALLCAN300
+151,Battery Temperature,2,Signed,−600,1270,0.1,°C,"""Battery temperature in Celsius""",ALLCAN300
+152,HV Battery Level,1,Unsigned,0,100,-,%,"""Battery level in percent""","ALLCAN300, CANCONTROL"
+160,DTC Faults,1,Unsigned,0,255,-,-,"""DTC faults Count""","ALLCAN300, CANCONTROL"
+161,Slope of Arm,2,Signed,−3276,3276,-,Degrees °,"""Slope Of Arm""",ALLCAN300
+162,Rotation of Arm,2,Signed,−180,180,-,Degrees °,"""Rotation Of Arm""",ALLCAN300
+163,Eject of Arm,2,Unsigned,0,6553,-,m,"""Eject of arm""",ALLCAN300
+164,Horizontal Distance Arm Vehicle,2,Unsigned,0,6553,-,m,"""Horizontal Distance Arm Vehicle""",ALLCAN300
+165,Height Arm Above Ground,2,Unsigned,0,6553,-,m,"""Height Arm Above Ground""",ALLCAN300
+166,Drill RPM,2,Unsigned,0,65535,-,rpm,"""Drill RPM""",ALLCAN300
+167,Amount Of Spread Salt Square Meter,2,Unsigned,0,655,-,g/m2,"""Amount Of Spread Salt Square Meter""",ALLCAN300
+168,Battery Voltage,2,Unsigned,0,6553,-,V,"""Battery Voltage""",ALLCAN300
+169,Amount Of Spread Fine Grained Salt,4,Unsigned,0,1677722,-,T,"""Amount Of Spread Fine Grained Salt""",ALLCAN300
+170,Amount Of Coarse Grained Salt,4,Unsigned,0,1677722,-,T,"""Amount Of Coarse Grained Salt""",ALLCAN300
+171,Amount Of Spread DiMix,4,Unsigned,0,1677722,-,T,"""Amount Of Spread DiMix""",ALLCAN300
+172,Amount Of Spread Coarse Grained Calcium,4,Unsigned,0,1677722,-,m3,"""Amount Of Spread Coarse Grained Calcium""",ALLCAN300
+173,Amount Of Spread Calcium Chloride,4,Unsigned,0,1677722,-,m3,"""Amount Of Spread Calcium Chloride""",ALLCAN300
+174,Amount Of Spread Sodium Chloride,4,Unsigned,0,1677722,-,m3,"""Amount Of Spread Sodium Chloride""",ALLCAN300
+176,Amount Of Spread Magnesium Chloride,4,Unsigned,0,1677722,-,m3,"""Amount Of Spread Magnesium Chloride""",ALLCAN300
+177,Amount Of Spread Gravel,4,Unsigned,0,1677722,-,T,"""Amount Of Spread Gravel""",ALLCAN300
+178,Amount Of Spread Sand,4,Unsigned,0,1677722,-,T,"""Amount Of Spread Sand""",ALLCAN300
+183,Width Pouring Left,2,Unsigned,0,655,-,m,"""Width Pouring Left""",ALLCAN300
+184,Width Pouring Right,2,Unsigned,0,655,-,m,"""Width Pouring Right""",ALLCAN300
+185,Salt Spreader Working Hours,4,Unsigned,0,167722,-,h,"""Salt Spreader Working Hours""",ALLCAN300
+186,Distance During Salting,4,Unsigned,0,167722,-,km,"""Distance During Salting""",ALLCAN300
+187,Load Weight,4,Unsigned,0,16772215,-,kg,"""Load Weight""",ALLCAN300
+188,Retarder Load,1,Unsigned,0,130,-,%,"""Retarded Load in percent""",ALLCAN300
+189,Cruise Time,4,Unsigned,0,16772215,-,min,"""Cruise time in minutes""",ALLCAN300
+232,CNG Status,1,Unsigned,0,1,-,-,"""CNG Status""","LVCAN200, CANCONTROL"
+233,CNG Used,4,Unsigned,0,16772215,-,kg,"""CNG used""","LVCAN200, CANCONTROL"
+234,CNG Level,1,Unsigned,0,100,-,%,"""CNG Level""","LVCAN200, CANCONTROL"
+235,Oil Level,1,Unsigned,0,1,-,-,"""Engine Oil Level""","ALLCAN300, CANCONTROL"
+304,Vehicles Range On Battery,4,Unsigned,0,16777215,-,m,"""Vehicle Range on Battery""","ALLCAN300, CANCONTROL"
+305,Vehicles Range On Additional Fuel,4,Unsigned,0,16777215,-,m,"""Vehicle Range On Additional Fuel""","ALLCAN300, CANCONTROL"
+325,VIN,17,ASCII,0,0xFF,-,-,"""VIN number""",CANCONTROL
+282,Fault Codes,Variable,-,0,128,-,-,"""DTC Fault codes""",LV-CAN200 + DTC
+517,Security State Flags P4,8,HEX,0,0xffffffffffffffff,-,-,"""Security state flags protocol 4, more information click here Flags""",ALLCAN300
+518,Control State Flags P4,8,HEX,0,0xffffffffffffffff,-,-,"""Control state flags protocol 4, more information click here Flags""",ALLCAN300
+519,Indicator State Flags P4,8,HEX,0,0xffffffffffffffff,-,-,"""Indicator state flags protocol 4, more information click here Flags""",ALLCAN300
+520,Agricultural State Flags P4,8,HEX,0,0xffffffffffffffff,-,-,"""Agricultural state flags protocol 4, more information click here Flags""",ALLCAN300
+521,Utility State Flags P4,8,HEX,0,0xffffffffffffffff,-,-,"""Utility state flags protocol 4, more information click here Flags""",ALLCAN300
+522,Cistern State Flags P4,8,HEX,0,0xffffffffffffffff,-,-,"""Cistern state flags protocol 4, more information click here Flags""",ALLCAN300
+855,LNG Used,4,Unsigned,0,214748364,-,kg,"""Total LNG used in kilograms""","ALLCAN300, CANCONTROL"
+856,LNG Used (counted),4,Unsigned,0,214748364,-,kg,"""Total LNG used counted in kg""","ALLCAN300, CANCONTROL"
+857,LNG Level,2,Unsigned,0,100,-,%,"""LNG level in proc""","ALLCAN300, CANCONTROL"
+858,LNG Level,2,Unsigned,0,6553,-,kg,"""LNG level in kg""","ALLCAN300, CANCONTROL"
+1100,Total LPG Used,4,Unsigned,0,4294967295,-,l,"""Total LPG used in liters""",LVCAN
+1101,Total LPG Used Counted,4,Unsigned,0,4294967295,-,l,"""Total LPG used counted in liters""",LVCAN
+1102,LPG Level Proc,2,Unsigned,0,65535,-,%,"""LPG level in proc""",LVCAN
+1103,LPG Level Liters,2,Unsigned,0,65535,-,l,"""LPG level in liters""",LVCAN
+898,SSF Ignition,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""","LVCAN, ALLCAN300, CANCONTROL"
+652,SSF KeyInIgnitionLock,1,Unsigned,0,1,-,-,"""0 - No key in lock 1 - Key in lock""","ALLCAN300, CANCONTROL"
+899,SSF Webasto,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+900,SSF Engine Working,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""","ALLCAN300, CANCONTROL"
+901,SSF Standalone Engine,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+902,SSF Ready To Drive,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""","ALLCAN300, CANCONTROL"
+903,SSF Engine Working On CNG,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""","ALLCAN300, CANCONTROL"
+904,SSF Work Mode,1,Unsigned,0,1,-,-,"""0 - Private 1 - Company""",ALLCAN300
+905,SSF Operator,1,Unsigned,0,1,-,-,"""0 - Not present 1 - Present""",ALLCAN300
+906,SSF Interlock,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+907,SSF Engine Lock Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",CANCONTROL
+908,SSF Request To Lock Engine,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",CANCONTROL
+653,SSF Handbrake Is Active,1,Unsigned,0,1,-,-,"""0 - Handbrake inactive 1 - Handbrake active""","ALLCAN300, CANCONTROL"
+910,SSF Footbrake Is Active,1,Unsigned,0,1,-,-,"""0 - Footbrake inactive 1 - Footbrake active""","ALLCAN300, CANCONTROL"
+911,SSF Clutch Pushed,1,Unsigned,0,1,-,-,"""0 - Clutch is pushed 1 - Clutch is not pushed""","ALLCAN300, CANCONTROL"
+912,SSF Hazard Warning Lights,1,Unsigned,0,1,-,-,"""0 - Hazard warning lights on 1 - Hazard warning lights off""","ALLCAN300, CANCONTROL"
+654,SSF Front Left Door Open,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","LVCAN, ALLCAN300, CANCONTROL"
+655,SSF Front Right Door Open,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","LVCAN, ALLCAN300, CANCONTROL"
+656,SSF Rear Left Door Open,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","LVCAN, ALLCAN300, CANCONTROL"
+657,SSF Rear Right Door Open,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","LVCAN, ALLCAN300, CANCONTROL"
+658,SSF Trunk Door Open,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","LVCAN, ALLCAN300, CANCONTROL"
+913,SSF Engine Cover Open,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","LVCAN, ALLCAN300, CANCONTROL"
+909,SSF Roof Open,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","LVCAN, ALLCAN300, CANCONTROL"
+914,SSF Charging Wire Plugged,1,Unsigned,0,1,-,-,"""0 - Unplugged 1 - Plugged""","ALLCAN300, CANCONTROL"
+915,SSF Batttery Charging,1,Unsigned,0,1,-,-,"""0 - Not charging 1 - Charging""","ALLCAN300, CANCONTROL"
+916,SSF Electric Engine State,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","ALLCAN300, CANCONTROL"
+917,SSF Car Closed Factory Remote,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","ALLCAN300, CANCONTROL"
+662,SSF Car Is Closed,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","ALLCAN300, CANCONTROL"
+918,SSF Factory Alarm Actuated,1,Unsigned,0,1,-,-,"""0 - Not actuated 1 - Actuated""","ALLCAN300, CANCONTROL"
+919,SSF Factory Alarm Emulated,1,Unsigned,0,1,-,-,"""0 - Not emulated 1 - Emulated""","ALLCAN300, CANCONTROL"
+920,SSF Signal Close Factory Remote,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","ALLCAN300, CANCONTROL"
+921,SSF Signal Open Factory Remote,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","ALLCAN300, CANCONTROL"
+922,SSF Rearming Signal,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","ALLCAN300, CANCONTROL"
+923,SSF Trunk Door Opened Factory Remote,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Open""","ALLCAN300, CANCONTROL"
+924,SSF CAN Module In Sleep,1,Unsigned,0,1,-,-,"""0 - Not in sleep 1 - In sleep""","LVCAN, ALLCAN300, CANCONTROL"
+925,SSF Factory Remote 3x,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+926,SSF Factory Armed,1,Unsigned,0,1,-,-,"""0 - Not armed 1 - Armed""",CANCONTROL
+660,SSF Parking Gear Active (automatic gear box),1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""","ALLCAN300, CANCONTROL"
+661,SSF Reverse Gear Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""","ALLCAN300, CANCONTROL"
+659,SSF Neutral Gear Active (automatic gear box),1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""","ALLCAN300, CANCONTROL"
+927,SSF Drive Is Active (automatic gear box),1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""","ALLCAN300, CANCONTROL"
+1083,SSF Engine Working On Dual Fuel,1,Unsigned,0,1,-,-,"""0 - Not working 1 - Working""",ALLCAN300
+1084,SSF Engine Working On LPG,1,Unsigned,0,1,-,-,"""0 - Not working 1 - Working""",ALLCAN300
+928,CSF Parking Lights,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","ALLCAN300, CANCONTROL"
+929,CSF Dipped Head lights,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","ALLCAN300, CANCONTROL"
+930,CSF Full Beam Headlights,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","ALLCAN300, CANCONTROL"
+931,CSF Rear Fog Lights,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","ALLCAN300, CANCONTROL"
+932,CSF Front Fog Lights,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","ALLCAN300, CANCONTROL"
+933,CSF Additional Front Lights,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+934,CSF Additional Rear Lights,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+935,CSF Light Signal,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+936,CSF Air Conditioning,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+937,CSF Cruise Control,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+938,CSF Automatic Retarder,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+939,CSF Manual Retarder,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+940,CSF Driver's Seatbelt Fastened,1,Unsigned,0,1,-,-,"""0 - Not fastened 1 - Fastened""",ALLCAN300
+941,CSF Front Driver's Seatbelt Fastened,1,Unsigned,0,1,-,-,"""0 - Not fastened 1 - Fastened""",ALLCAN300
+942,CSF Left Driver's Seatbelt Fastened,1,Unsigned,0,1,-,-,"""0 - Not fastened 1 - Fastened""",ALLCAN300
+943,CSF Right Driver's Seatbelt Fastened,1,Unsigned,0,1,-,-,"""0 - Not fastened 1 - Fastened""",ALLCAN300
+944,CSF Centre Driver's Seatbelt Fastened,1,Unsigned,0,1,-,-,"""0 - Not fastened 1 - Fastened""",ALLCAN300
+945,CSF Front Passenger Present,1,Unsigned,0,1,-,-,"""0 - Not present 1 - Present""",ALLCAN300
+946,CSF PTO,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+947,CSF Front Differential Locked,1,Unsigned,0,1,-,-,"""0 - Unlocked 1 - Locked""",ALLCAN300
+948,CSF Rear Differential Locked,1,Unsigned,0,1,-,-,"""0 - Unlocked 1 - Locked""",ALLCAN300
+949,CSF Central Differential 4HI Locked,1,Unsigned,0,1,-,-,"""0 - Unlocked 1 - Locked""",ALLCAN300
+950,CSF Rear Differential 4LO Locked,1,Unsigned,0,1,-,-,"""0 - Unlocked 1 - Locked""",ALLCAN300
+951,CSF Trailer Axle 1 Lift Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+952,CSF Trailer Axle 2 Lift Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+1085,CSF Trailer Connected,1,Unsigned,0,1,-,-,"""0 - Disconnected 1 - Connected""",ALLCAN300
+1086,CSF Start Stop System Inactive,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+953,ISF Check Engine Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+954,ISF ABS Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+955,ISF ESP Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+956,ISF ESP Turned Off,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+957,ISF Stop Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+958,ISF Oil Level Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","ALLCAN300, CANCONTROL"
+959,ISF Coolant liquid level,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+960,ISF Battery Not Charging Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+961,ISF Handbrake System Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+962,ISF AIRBAG Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+963,ISF EPS Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+964,ISF Warning Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+965,ISF Lights Failure Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+966,ISF Low Tire Pressure Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+967,ISF Wear Of Brake Pads Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+968,ISF Low Fuel Level Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+969,ISF Maintenence required Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+970,ISF Glow Plug Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+971,ISF FAP Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+972,ISF EPC (Electronic Power Control) Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+973,ISF Clogged Engine Oil Filter Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+974,ISF Low Engine Oil Pressure Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+975,ISF Too High Engine Oil Temperature Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+976,ISF Low Coolant Level Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+977,ISF Clogged Hydraulic System Oil filter Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+978,ISF Hydraulic System Low Pressure Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+979,ISF Hydraulic Oil Low Level Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+980,ISF Hydraulic System High Temperature Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+981,ISF Oil Overflow In Hydraulic Chamber Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+982,ISF Clogged Air Filter Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+983,ISF Clogged Fuel Filter Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+984,ISF Water in Fuel Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+985,ISF Clogged Brake System Filter Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+986,ISF Low Washer Fluid Level Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","LVCAN, ALLCAN300"
+987,ISF Low AdBlue Level Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","LVCAN, ALLCAN300"
+988,ISF Low Trailer Tyre Pressure Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+989,ISF Wear Of Trailer Brake Lining Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+990,ISF High Trailer Brake Temperature Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+991,ISF Incorrect Trailer Pneumatic Supply Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+992,ISF Low CNG Level Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""","LVCAN, ALLCAN300"
+993,ASF Right Joystick Moved Right Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+994,ASF Right Joystick Moved Left Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+995,ASF Right Joystick Moved Forward Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+996,ASF Right Joystick Moved Back Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+997,ASF Left Joystick Moved Right Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+998,ASF Left Joystick Moved Left Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+999,ASF Left Joystick Moved Forward Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+1000,ASF Left Joystick Moved Back Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+1001,ASF First Rear hydraulic,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1002,ASF Second Rear hydraulic,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1003,ASF Third Rear hydraulic,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1004,ASF Fourth Rear hydraulic,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1005,ASF First Front hydraulic,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1006,ASF Second Front hydraulic,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1007,ASF Third Front hydraulic,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1008,ASF Fourth Front hydraulic,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1009,ASF Front Three-point Hitch,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1010,ASF Rear Three-point Hitch,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1011,ASF Front Power Take-off,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1012,ASF Rear Power Take-off,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1013,ASF Mowing Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+1014,ASF Threshing Active,1,Unsigned,0,1,-,-,"""0 - Inactive 1 - Active""",ALLCAN300
+1015,ASF Grain Release From Hopper,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1016,ASF Grain Tank Is 100% Full,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1017,ASF Grain Tank Is 70% Full,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1018,ASF Grain Tank Is Opened,1,Unsigned,0,1,-,-,"""0 - Closed 1 - Opened""",ALLCAN300
+1019,ASF Unloader Drive,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1020,ASF Cleaning Fan Control Turned Off,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1021,ASF Threshing Drum Control Turned Off,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1022,ASF Straw Walker Is Clogged,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1023,ASF Excessive Clearance Under The Threshing Drum,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1024,ASF Low Temperature Of Drive System Hydraulics Less Than 5 Grades,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1025,ASF High Temperature Of Drive System Hydraulics Greater Than 86 Grades,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1026,ASF Ear Auger Speed Below The Norm,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1027,ASF Grain Auger Speed Below The Norm,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1028,ASF Straw Chooper Speed Below The Norm,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1029,ASF Straw Shaker Speed Below The Norm,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1030,ASF Feeder Speed Below The Norm,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1031,ASF Straw Chopper Switched On,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1032,ASF Corn Header Connected,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1033,ASF Grain Header Connected,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1034,ASF Feeder Reverse Switched On,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1035,ASF The Pressure Filter Of The Hydraulic Pump Is Clogged,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1087,ASF Adapter Pressure Filter Sensor,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1088,ASF Service 2 Required Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1089,ASF Drain Filter Clogged Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1090,ASF Section 1 Spraying,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1091,ASF Section 2 Spraying,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1092,ASF Section 3 Spraying,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1093,ASF Section 4 Spraying,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1094,ASF Section 5 Spraying,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1095,ASF Section 6 Spraying,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1096,ASF Section 7 Spraying,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1097,ASF Section 8 Spraying,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1098,ASF Section 9 Spraying,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1036,USF Spreading,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1037,USF Pouring Chemicals,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1038,USF Conveyor Belt,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1039,USF Salt Spreader's Drive Wheel,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1040,USF Brushes,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1041,USF Vacuum Cleaner,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1042,USF Water Supply,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1043,USF Spreading,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1044,USF Liquid pump,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1045,USF Unloading From The Hopper,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1046,USF Low Salt (Sand) Level In Container Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1047,USF Low Water Level in Container Indicator,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1048,USF Chemicals,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1049,USF Compressor,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1050,USF Water Valve Is Opened,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1051,USF Cabin Moved Up Status Active,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1052,USF Cabin Moved Down Status Active,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1099,USF Hydraulics Work Not Permitted,1,Unsigned,0,1,-,-,"""0 - Off 1 - On""",ALLCAN300
+1053,CiSF Section 1 Presence Of Fluid In The Downpipe,1,Unsigned,0,1,-,-,"""0 - No presence 1 - Present""",ALLCAN300
+1054,CiSF Section 1 Filled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1055,CiSF Section 1 Overfilled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1056,CiSF Section 2 Presence Of Fluid In The Downpipe,1,Unsigned,0,1,-,-,"""0 - No presence 1 - Present""",ALLCAN300
+1057,CiSF Section 2 Filled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1058,CiSF Section 2 Overfilled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1059,CiSF Section 3 Presence Of Fluid In The Downpipe,1,Unsigned,0,1,-,-,"""0 - No presence 1 - Present""",ALLCAN300
+1060,CiSF Section 3 Filled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1061,CiSF Section 3 Overfilled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1062,CiSF Section 4 Presence Of Fluid In The Downpipe,1,Unsigned,0,1,-,-,"""0 - No presence 1 - Present""",ALLCAN300
+1063,CiSF Section 4 Filled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1064,CiSF Section 4 Overfilled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1065,CiSF Section 5 Presence Of Fluid In The Downpipe,1,Unsigned,0,1,-,-,"""0 - No presence 1 - Present""",ALLCAN300
+1066,CiSF Section 5 Filled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1067,CiSF Section 5 Overfilled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1068,CiSF Section 6 Presence Of Fluid In The Downpipe,1,Unsigned,0,1,-,-,"""0 - No presence 1 - Present""",ALLCAN300
+1069,CiSF Section 6 Filled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1070,CiSF Section 6 Overfilled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1071,CiSF Section 7 Presence Of Fluid In The Downpipe,1,Unsigned,0,1,-,-,"""0 - No presence 1 - Present""",ALLCAN300
+1072,CiSF Section 7 Filled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1073,CiSF Section 7 Overfilled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1074,CiSF Section 8 Presence Of Fluid In The Downpipe,1,Unsigned,0,1,-,-,"""0 - No presence 1 - Present""",ALLCAN300
+1075,CiSF Section 8 Filled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300
+1076,CiSF Section 8 Overfilled,1,Unsigned,0,1,-,-,"""0 - No 1 - Yes""",ALLCAN300

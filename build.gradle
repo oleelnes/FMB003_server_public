@@ -1,0 +1,83 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    ext {
+        kotlinVersion = "1.3.72"
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+plugins {
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+apply plugin: "kotlin"
+
+group = "ntnu.olekel" // A company name, for example, `org.jetbrains`
+version = "1.3" // Version to assign to the built artifact
+
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+application {
+    mainClass.set("MainKt")
+}
+
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin/'
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.1.16"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0'
+    testImplementation(
+            'org.assertj:assertj-core:3.12.2',
+            'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    )
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
+    compile 'org.jetbrains.kotlin:kotlin-stdlib'
+}
+/*
+tasks.withType<ShadowJar>() {
+    manifest {
+        attributes["Main-Class"] = "Mainkt"
+    }
+}*/
+
+project.setProperty("mainClassName", "ntnu.olekel.Mainkt")
+
+tasks.jar {
+    manifest.attributes["Main-Class"] = "MainKt"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': application.mainClassName
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+shadowJar {
+    archiveVersion = ''
+    mainClassName = application.mainClassName
+
+    mergeServiceFiles()
+}
