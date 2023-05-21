@@ -1,3 +1,13 @@
+/**
+ * PACKAGE AVL, files:
+ *      - AvlParser.kt:             Parser for AVL.
+ *      - AvlParserDataTypes.kt     File that contains all the data types (data classes and enum classes) required for
+ *                                  the parsing of the AVL.
+ *      - EventIoReader.kt          File that contains all functions for reading the CSV-file containing information
+ *                                  about all AVL parameters.
+ *
+ * EventIoReader.kt
+ */
 package avl
 
 import java.io.BufferedReader
