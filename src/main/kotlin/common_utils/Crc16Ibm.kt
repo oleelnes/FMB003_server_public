@@ -35,6 +35,13 @@ object CRC16IBM {
         0x4400, 0x84C1, 0x8581, 0x4540, 0x8701, 0x47C0, 0x4680, 0x8641,
         0x8201, 0x42C0, 0x4380, 0x8341, 0x4100, 0x81C1, 0x8081, 0x4040)
 
+
+    /**
+     * Generate crc-16.
+     *
+     * @param data  The data to generate the CRC-16 for.
+     * @return      The CRC-16 as an Integer.
+     */
     fun generate(data: ByteArray): Int {
         var crc = 0x0000
         for (byte in data)
